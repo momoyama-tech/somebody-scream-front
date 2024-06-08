@@ -1,7 +1,21 @@
+<script>
+	export let data;
+	console.log(data)
+</script>
+
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>Todo</title>
+	<meta name="description" content="Todo this app" />
 </svelte:head>
+
+{#each data.todos as todo}
+    <p> {todo.id} </p>
+	<p> {todo.title} </p>
+	<p> {todo.description} </p>
+	<p> {todo.completed} </p>
+	<p> {todo.created_at} </p>
+	<p> {todo.updated_at} </p>
+{/each}
 
 <div class="text-column">
 	<h1>About this app</h1>
